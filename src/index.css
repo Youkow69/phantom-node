@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --bg: #000000;
+  --text: #FFFFFF;
+  --accent: #E21B1B;
+  --muted: #666666;
+}
+
+body.night-mode {
+  --bg: #1A0505;
+  --text: #E21B1B;
+  --accent: #FF3333;
+  --muted: #661111;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.8s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+body.night-mode img {
+  filter: grayscale(1) brightness(0.3) sepia(1) hue-rotate(-30deg);
+  transition: filter 0.8s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes scanline {
+  0% { top: 0; }
+  100% { top: 100vh; }
+}
